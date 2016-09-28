@@ -1,4 +1,4 @@
-class Person
+ class Person
   attr_accessor :name, :age
 
   def initialize(name, age)
@@ -8,21 +8,27 @@ class Person
 
   def nickname
     # YOUR IMPLEMENTATION HERE
-    'nickname'
+    nick = name[0..3]
   end
 
   def birth_year
     # YOUR IMPLEMENTATION HERE
-    1990
+    year = 2016 - age.to_i
   end
 
   def introduction
     # YOUR IMPLEMENTATION HERE
-    'introduce'
+    intro = "Hello, my name is " + name + " and I am " + age.to_s + " years old."
   end
 
   def fib_number
     # YOUR IMPLMENTATION HERE
-    0
+  	def fibonacci( n )
+  		return  n  if ( 0..1 ).include? n
+  		( fibonacci( n - 1 ) + fibonacci( n - 2 ) )
+	end
+
+	fibonacci(age.to_i)
   end
+
 end
